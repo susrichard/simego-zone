@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<AssemblyTitle>_TEMPLATE_PROVIDER_</AssemblyTitle>
+		<Product>_TEMPLATE_PROVIDER_</Product>
+		<Copyright>Copyright ©  2021</Copyright>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="Simego.DataSync, Version=3.0.1134.0, Culture=neutral, PublicKeyToken=205eb815ceeab531, processorArchitecture=MSIL">
+			<HintPath>..\..\..\..\..\..\Program Files\Simego\Data Synchronisation Studio 3.0\Simego.DataSync.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+		<Reference Include="System.Windows.Forms" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="ConnectionInterface.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="ConnectionInterface.Designer.cs">
+			<DependentUpon>ConnectionInterface.cs</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Update="ConnectionInterface.resx">
+			<DependentUpon>ConnectionInterface.cs</DependentUpon>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="readme.txt" />
+	</ItemGroup>
+</Project>

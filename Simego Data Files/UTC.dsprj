@@ -1,0 +1,126 @@
+<Project Name="UTC" Version="3.0.2090" SyncOption="SyncAtoB" SyncFailOnError="True" IgnoreCase="True" IgnoreWhiteSpace="True" IgnoreInvalidXmlChars="False" OverrideSSLCheck="False" EmptyStringAndNullAreEqual="False" DuplicateKeyMode="IncludeFirst" ExecutionMode="InProc" ChangeSetMode="Default">
+  <DataSource Direction="Source" Type="Simego.DataSync.Providers.Podio.PodioItemsDataSourceReader, Simego.DataSync.Providers.Podio" EnableAdd="True" EnableUpdate="True" EnableDelete="False">
+    <Initialization>
+      <Parameter Name="RegistryKey" Value="Podio-Connection" />
+      <Parameter Name="AuthenticationMode" Value="Client" />
+      <Parameter Name="App" Value="StraightUp Solar/SUS Podio App Lab/Richard SQL Zone" />
+      <Parameter Name="AppID" Value="26935265" />
+      <Parameter Name="AppSpaceID" Value="5907897" />
+      <Parameter Name="View" Value="All Items" />
+      <Parameter Name="ViewID" Value="0" />
+      <Parameter Name="AppToken" Value="f08680a68780af5065dadbfe07c48496" />
+      <Parameter Name="Limit" Value="250" />
+      <Parameter Name="Silent" Value="True" />
+      <Parameter Name="DateTimeHandling" Value="Local" />
+    </Initialization>
+    <Columns>
+      <Column Name="external_id" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="item_id" DataType="System.Int32" Unique="True" Length="-1" />
+      <Column Name="app_item_id" DataType="System.Int32" Unique="True" Length="-1" />
+      <Column Name="app_item_id_formatted" DataType="System.String" Unique="True" Length="-1" />
+      <Column Name="created_on" DataType="System.DateTime" Length="-1" />
+      <Column Name="last_event_on" DataType="System.DateTime" AllowNull="True" Length="-1" />
+      <Column Name="created_by|user_id" DataType="System.Int32" Length="-1" />
+      <Column Name="created_by|name" DataType="System.String" Length="-1" />
+      <Column Name="title" DisplayName="Title" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="text-multiline" DisplayName="Text Multiline" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="category-single|id" DisplayName="Category Single|id" DataType="System.Int32" AllowNull="True" Length="-1" />
+      <Column Name="category-single|text" DisplayName="Category Single|text" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="category-multiple|id" DisplayName="Category Multiple|id" DataType="System.Int32[]" AllowNull="True" Length="-1" />
+      <Column Name="category-multiple|text" DisplayName="Category Multiple|text" DataType="System.String[]" AllowNull="True" Length="-1" />
+      <Column Name="datetime-without-end|startdate" DisplayName="Datetime Without End|startdate" DataType="System.DateTime" AllowNull="True" Length="-1" />
+      <Column Name="datetime-without-end|enddate" DisplayName="Datetime Without End|enddate" DataType="System.DateTime" AllowNull="True" Length="-1" />
+      <Column Name="date-without-end|startdate" DisplayName="Date Without End|startdate" DataType="System.DateTime" AllowNull="True" Length="-1" />
+      <Column Name="date-without-end|enddate" DisplayName="Date Without End|enddate" DataType="System.DateTime" AllowNull="True" Length="-1" />
+      <Column Name="relationship-single" DisplayName="Relationship Single" DataType="System.Int32[]" AllowNull="True" Length="-1" />
+      <Column Name="relationship-single|title" DisplayName="Relationship Single|title" DataType="System.String[]" AllowNull="True" Length="-1" />
+      <Column Name="relationship-multiple" DisplayName="Relationship Multiple" DataType="System.Int32[]" AllowNull="True" Length="-1" />
+      <Column Name="relationship-multiple|title" DisplayName="Relationship Multiple|title" DataType="System.String[]" AllowNull="True" Length="-1" />
+      <Column Name="contact|user_id" DisplayName="Contact|user_id" DataType="System.Int32[]" AllowNull="True" Length="-1" />
+      <Column Name="contact|profile_id" DisplayName="Contact|profile_id" DataType="System.Int32[]" AllowNull="True" Length="-1" />
+      <Column Name="contact|connection_id" DisplayName="Contact|connection_id" DataType="System.Int32[]" AllowNull="True" Length="-1" />
+      <Column Name="contact|external_id" DisplayName="Contact|external_id" DataType="System.String[]" AllowNull="True" Length="-1" />
+      <Column Name="contact|name" DisplayName="Contact|name" DataType="System.String[]" AllowNull="True" Length="-1" />
+      <Column Name="phone|mobile" DisplayName="Phone|mobile" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="phone|home" DisplayName="Phone|home" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="phone|work" DisplayName="Phone|work" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="phone|main" DisplayName="Phone|main" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="phone|work_fax" DisplayName="Phone|work_fax" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="phone|private_fax" DisplayName="Phone|private_fax" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="phone|other" DisplayName="Phone|other" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="email|work" DisplayName="Email|work" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="email|home" DisplayName="Email|home" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="email|other" DisplayName="Email|other" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="number-whole" DisplayName="Number Whole" DataType="System.Decimal" AllowNull="True" Length="-1" />
+      <Column Name="number-2-decimal" DisplayName="Number 2 Decimal" DataType="System.Decimal" AllowNull="True" Length="-1" />
+      <Column Name="number-2-decimal-2" DisplayName="Number 4 Decimal" DataType="System.Decimal" AllowNull="True" Length="-1" />
+      <Column Name="link|id" DisplayName="Link|id" DataType="System.Int32" AllowNull="True" Length="-1" />
+      <Column Name="link|original_url" DisplayName="Link|original_id" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="link|resolved_url" DisplayName="Link|resolved_url" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="link|title" DisplayName="Link|title" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="link|description" DisplayName="Link|description" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="link|type" DisplayName="Link|type" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="image|id" DisplayName="Image|id" DataType="System.Int32" AllowNull="True" Length="-1" />
+      <Column Name="image|name" DisplayName="Image|name" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="image|description" DisplayName="Image|description" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="image|mimetype" DisplayName="Image|mimetype" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="image|size" DisplayName="Image|size" DataType="System.Int32" AllowNull="True" Length="-1" />
+      <Column Name="image|perma_link" DisplayName="Image|perma_link" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="image|link" DisplayName="Image|link" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="image|thumbnail_link" DisplayName="Image|thumbnail_link" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="money-no-currency|amount" DisplayName="Money No Currency|amount" DataType="System.Decimal" AllowNull="True" Length="-1" />
+      <Column Name="money-no-currency|currency" DisplayName="Money No Currency|currency" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="money-usd|amount" DisplayName="Money USD|amount" DataType="System.Decimal" AllowNull="True" Length="-1" />
+      <Column Name="money-usd|currency" DisplayName="Money USD|currency" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="progress" DisplayName="Progress" DataType="System.Int32" AllowNull="True" Length="-1" />
+      <Column Name="calculation-text" DisplayName="Calculation Text" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="calculation-number-2" DisplayName="Calculation Number" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location" DisplayName="Location" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location|formatted" DisplayName="Location|formatted" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location|street_number" DisplayName="Location|street_number" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location|street_name" DisplayName="Location|street_name" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location|city" DisplayName="Location|city" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location|state" DisplayName="Location|state" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location|postal_code" DisplayName="Location|postal_code" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location|country" DisplayName="Location|country" DataType="System.String" AllowNull="True" Length="-1" />
+      <Column Name="location|lat" DisplayName="Location|lat" DataType="System.Double" AllowNull="True" Length="-1" />
+      <Column Name="location|lng" DisplayName="Location|lng" DataType="System.Double" AllowNull="True" Length="-1" />
+      <Column Name="location|map_in_sync" DisplayName="Location|map_in_sync" DataType="System.Boolean" AllowNull="True" Length="-1" />
+      <Column Name="duration" DisplayName="Duration" DataType="System.Int32" AllowNull="True" Length="-1" />
+      <Column Name="renamed-category|id" DisplayName="Some Totally Differently Named Category|id" DataType="System.Int32" AllowNull="True" Length="-1" />
+      <Column Name="renamed-category|text" DisplayName="Some Totally Differently Named Category|text" DataType="System.String" AllowNull="True" Length="-1" />
+    </Columns>
+    <Transform>using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using Simego.DataSync;
+
+// This module of code allows you to define some columns in code as Dynamic Columns
+// To Create new Dynamic Columns simply expose them as properties in this class.
+
+partial class DataSourceRowOverride : Simego.DataSync.DynamicColumns.DataSourceRowInternal //Do Not Change This Line
+{
+	// Every time DataSync calculates a row it calls this BeginRow method.
+	// You can use this to decide whether to include the row in the results
+	// Return true to process the row or false to skip the row.
+	public override bool BeginRow()
+	{
+		return true; // return false to skip row from results.
+	}
+
+	// Do any setup here, load external data etc.
+	public override void Setup()
+	{
+		// Do any setup here, load external data etc.
+	}
+}</Transform>
+    <CalculatedColumns>
+      <CalculatedColumn Name="DatetimeWithoutEndnulltime" DataType="System.String">TIMESTR(DatetimeWithoutEndstartdate,"H:mm:ss")</CalculatedColumn>
+    </CalculatedColumns>
+  </DataSource>
+  <DataSourceMap />
+</Project>
