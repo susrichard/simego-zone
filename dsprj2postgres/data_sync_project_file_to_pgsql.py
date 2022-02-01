@@ -5,8 +5,8 @@ import xml.etree.ElementTree as ET
 import get_calc_field_types as podio
 
 # files should be schema.table.dsprj (workspace.app.dsprj)
-# simego_file = sys.argv[1]
-simego_file = 'Simego Data Sync Projects\public.richard_sql_zone.dsprj'
+simego_file = sys.argv[1]
+#simego_file = 'Simego Data Sync Projects\public.richard_sql_zone.dsprj'
 try:
     file_path, file_name = os.path.split(simego_file)
     print(file_name)
