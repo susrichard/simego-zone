@@ -1,0 +1,1 @@
+python data_sync_project_file_to_pgsql.py %*
